@@ -33,9 +33,28 @@ const auth = () => {
 //função que define mensagem dependendo do imc e do sexo
 const messagePerImc = (imc) => {
   if (rdbF.checked) {
-  } else {
     if (imc < 19) {
-      mensagem.textContent = "Abaixo do peso";
+      mensagem.textContent = "Peso abaixo do normal";
+    } else if (imc < 23.9) {
+      mensagem.textContent = "Peso Normal";
+    } else if (imc < 28.9) {
+      mensagem.textContent = "Obesidade leve";
+    } else if (imc < 38.9) {
+      mensagem.textContent = "Obesidade moderada";
+    } else {
+      mensagem.textContent = "Obesidade mórbida";
+    }
+  } else {
+    if (imc < 20) {
+      mensagem.textContent = "Peso abaixo do normal";
+    } else if (imc < 24.9) {
+      mensagem.textContent = "Peso Normal";
+    } else if (imc < 29.9) {
+      mensagem.textContent = "Obesidade leve";
+    } else if (imc < 39.9) {
+      mensagem.textContent = "Obesidade moderada";
+    } else {
+      mensagem.textContent = "Obesidade mórbida";
     }
   }
 };
@@ -62,4 +81,6 @@ btnLimp.addEventListener("click", (e) => {
   rdbM.checked = "";
   resultado.textContent = "";
   mensagem.textContent = "";
+
+  inputPeso.focus();
 });
