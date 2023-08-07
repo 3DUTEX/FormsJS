@@ -1,3 +1,8 @@
+* {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 .formsContainer {
   width: 100%;
   display: flex;
@@ -5,4 +10,55 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: #222;
+  color: chartreuse;
+  padding: 20px 0;
+  border-radius: 30px;
+}
+
+.formsContainer h1 {
+  padding: 10px 0;
+  font-size: 25px;
+}
+
+.formsContainer input {
+  color: chartreuse;
+  padding: 5px;
+  background: #747474;
+  border: none;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.formsContainer input:focus {
+  outline: 2px solid chartreuse;
+  box-shadow: 0 0 30px chartreuse;
+}
+
+.formsContainer button {
+  padding: 10px;
+  background-color: #747474;
+  color: chartreuse;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formsContainer button:hover {
+  background: none;
+  border: 2px solid chartreuse;
+  margin: 10px;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px chartreuse;
+}
+
+.formsContainer button:focus {
+  outline: 2px solid chartreuse;
+  box-shadow: 0 0 30px chartreuse;
+}
+
+.radioBtn {
+  border: none;
 }
